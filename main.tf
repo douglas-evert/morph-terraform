@@ -8,15 +8,6 @@ resource "aws_instance" "myVM" {
     }
 }
 
-resource "aws_instance" "myVM2" {
-    ami = "ami-0490fddec0cbeb88b"
-    instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-aca77dc1"]
-	key_name = "Terraform Code"
-    tags = {
-        Name = "aNewSystem"
-    }
-}
 
 provider "aws" {
 	region = "us-east-2"
